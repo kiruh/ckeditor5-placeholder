@@ -1,6 +1,6 @@
 {
   "name": "ckeditor5-placeholder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Widget that allows using of placeholders like \"First Name\", \"Date\" etc. in ckeditor5",
   "main": "index.js",
   "scripts": {
