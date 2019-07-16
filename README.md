@@ -2,25 +2,25 @@
 
 ## Documentation
 
-This package is an implementation of [Implementing an inline widget](https://ckeditor.com/docs/ckeditor5/latest/framework/guides/tutorials/implementing-an-inline-widget.html) tutorial describing how to create a “Placeholder” feature which allow the user to insert a predefined placeholders, like a date or a surname, into the document.
+This package is a final product of [Implementing an inline widget](https://ckeditor.com/docs/ckeditor5/latest/framework/guides/tutorials/implementing-an-inline-widget.html) tutorial describing how to create a “Placeholder” feature which allow the user to insert a predefined placeholders, like a date or a surname, into the document.
 
 ## Config
 
 ```js
-import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import ClassicEditor from "@ckeditor/ckeditor5-editor-classic/src/classiceditor";
 import Placeholder from "ckeditor5-placeholder";
 
 ClassicEditor.create(document.querySelector("#editor"), {
   plugins: [
     // ...
-    Placeholder
+    Placeholder,
   ],
   toolbar: [
     // ...
-    "placeholder"
+    "placeholder",
   ],
   placeholderProps: {
-    types: ["First Name", "Date"]
-  }
+    types: ["First Name", "Date"],
+  },
 });
 ```

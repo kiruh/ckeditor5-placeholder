@@ -4,7 +4,7 @@ import PlaceholderEditing from "./placeholderediting";
 import PlaceholderUI from "./placeholderui";
 
 export default class Placeholder extends Plugin {
-	static get requires() {
-		return [PlaceholderEditing, PlaceholderUI];
-	}
+  static get requires() {
+    return [PlaceholderEditing, PlaceholderUI];
+  }
 }
