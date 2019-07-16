@@ -62,6 +62,7 @@
     "@ckeditor/ckeditor5-ui": "^13.0.2",
     "@ckeditor/ckeditor5-utils": "^13.0.1",
     "@ckeditor/ckeditor5-widget": "^11.0.4",
+    "ckeditor5-placeholder": "^1.0.1",
     "core-js": "^3.0.1"
   }
 }
