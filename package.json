@@ -3,6 +3,9 @@
   "version": "1.0.2",
   "description": "Widget that allows using of placeholders like \"First Name\", \"Date\" etc. in ckeditor5",
   "main": "src/index.js",
+  "files": [
+    "src"
+  ],
   "scripts": {
     "prettify": "prettier --write 'src/**/*' 'examples/placeholder-demo/src/**/*' 'examples/placeholder-demo/webpack/**/*' "
   },
