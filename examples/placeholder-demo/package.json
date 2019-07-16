@@ -1,7 +1,7 @@
 {
-  "name": "webpack-starter",
+  "name": "placeholder-demo",
   "version": "1.0.0",
-  "description": "A light foundation for your next frontend project based on webpack.",
+  "description": "CKEditor5 placeholder demo",
   "scripts": {
     "build": "webpack --config webpack/webpack.config.prod.js  --colors",
     "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js"
