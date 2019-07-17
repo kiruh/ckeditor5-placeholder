@@ -6,6 +6,11 @@ This package is a final product of [Implementing an inline widget](https://ckedi
 
 ## [Demo](https://ckeditor5-placeholder.netlify.com/)
 
+## Install
+```
+npm install --save ckeditor5-placeholder
+```
+
 ## Config
 
 ```js
