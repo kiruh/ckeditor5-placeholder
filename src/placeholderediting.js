@@ -73,10 +73,10 @@ export default class PlaceholderEditing extends Plugin {
     conversion.for("editingDowncast").elementToElement({
       model: "placeholder",
       view: (modelItem, viewWriter) => {
-        const widgetElement = createPlaceholderView(modelItem, viewWriter);
+        const widgetElement = createPlaceholderView(modelItem, viewWriter.writer);
 
         // Enable widget handling on placeholder element inside editing view.
-        return toWidget(widgetElement, viewWriter);
+        return toWidget(widgetElement, viewWriter.writer);
       },
     });
 
