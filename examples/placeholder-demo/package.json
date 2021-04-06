@@ -56,7 +56,7 @@
     "@ckeditor/ckeditor5-essentials": "^11.0.4",
     "@ckeditor/ckeditor5-heading": "^11.0.4",
     "@ckeditor/ckeditor5-inspector": "^1.3.0",
-    "@ckeditor/ckeditor5-list": "^12.0.4",
+    "@ckeditor/ckeditor5-list": "^27.0.0",
     "@ckeditor/ckeditor5-paragraph": "^11.0.4",
     "@ckeditor/ckeditor5-theme-lark": "^14.1.1",
     "@ckeditor/ckeditor5-ui": "^13.0.2",
