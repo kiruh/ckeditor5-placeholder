@@ -62,9 +62,11 @@ export default class PlaceholderEditing extends Plugin {
         name: "span",
         classes: ["placeholder"],
       },
-      model: (viewElement, { writer: modelWriter }) => {
+      model: (viewElement, writer) => {
         // Extract the "name" from "{name}".
         const name = viewElement.getChild(0).data.slice(1, -1);
+
+        const modelWriter = writer.writer || writer;
 
         return modelWriter.createElement("placeholder", { name });
       },
@@ -72,7 +74,9 @@ export default class PlaceholderEditing extends Plugin {
 
     conversion.for("editingDowncast").elementToElement({
       model: "placeholder",
-      view: (modelItem, { writer: viewWriter }) => {
+      view: (modelItem, writer) => {
+        const viewWriter = writer.writer || writer;
+
         const widgetElement = createPlaceholderView(modelItem, viewWriter);
 
         // Enable widget handling on placeholder element inside editing view.
@@ -82,8 +86,11 @@ export default class PlaceholderEditing extends Plugin {
 
     conversion.for("dataDowncast").elementToElement({
       model: "placeholder",
-      view: (modelItem, { writer: viewWriter }) =>
-        createPlaceholderView(modelItem, viewWriter),
+      view: (modelItem, writer) => {
+        const viewWriter = writer.writer || writer;
+
+        return createPlaceholderView(modelItem, viewWriter)
+      },
     });
 
     // Helper method for both downcast converters.
