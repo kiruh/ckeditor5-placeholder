@@ -26,7 +26,7 @@ export default class PlaceholderEditing extends Plugin {
 
     this.editor.editing.mapper.on(
       "viewToModelPosition",
-      viewToModelPositionOutsideModelElement(this.editor.model, viewElement =>
+      viewToModelPositionOutsideModelElement(this.editor.model, (viewElement) =>
         viewElement.hasClass("placeholder"),
       ),
     );
@@ -62,7 +62,7 @@ export default class PlaceholderEditing extends Plugin {
         name: "span",
         classes: ["placeholder"],
       },
-      model: (viewElement, modelWriter) => {
+      model: (viewElement, { writer: modelWriter }) => {
         // Extract the "name" from "{name}".
         const name = viewElement.getChild(0).data.slice(1, -1);
 
@@ -72,17 +72,18 @@ export default class PlaceholderEditing extends Plugin {
 
     conversion.for("editingDowncast").elementToElement({
       model: "placeholder",
-      view: (modelItem, viewWriter) => {
-        const widgetElement = createPlaceholderView(modelItem, viewWriter.writer);
+      view: (modelItem, { writer: viewWriter }) => {
+        const widgetElement = createPlaceholderView(modelItem, viewWriter);
 
         // Enable widget handling on placeholder element inside editing view.
-        return toWidget(widgetElement, viewWriter.writer);
+        return toWidget(widgetElement, viewWriter);
       },
     });
 
     conversion.for("dataDowncast").elementToElement({
       model: "placeholder",
-      view: createPlaceholderView,
+      view: (modelItem, { writer: viewWriter }) =>
+        createPlaceholderView(modelItem, viewWriter),
     });
 
     // Helper method for both downcast converters.
