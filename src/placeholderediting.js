@@ -34,6 +34,11 @@ export default class PlaceholderEditing extends Plugin {
     this.editor.config.define("placeholderProps", {
       types: ["name", "date"],
     });
+
+    this.editor.config.define("placeholderBrackets", {
+      open: "{",
+      close: "}"
+    });
   }
 
   _defineSchema() {
@@ -56,6 +61,7 @@ export default class PlaceholderEditing extends Plugin {
 
   _defineConverters() {
     const conversion = this.editor.conversion;
+    const config = this.editor.config;
 
     conversion.for("upcast").elementToElement({
       view: {
@@ -101,7 +107,9 @@ export default class PlaceholderEditing extends Plugin {
         class: "placeholder",
       });
 
-      const innerText = viewWriter.createText("{" + name + "}");
+      const innerText = viewWriter.createText(
+          config.get("placeholderBrackets.open") + name + config.get("placeholderBrackets.close")
+      );
       viewWriter.insert(
         viewWriter.createPositionAt(placeholderView, 0),
         innerText,

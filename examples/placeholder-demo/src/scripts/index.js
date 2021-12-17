@@ -23,6 +23,10 @@ ClassicEditor.create(document.querySelector("#editor"), {
   placeholderProps: {
     types: ["First Name", "Date"],
   },
+  placeholderBrackets: {
+    open: "{",
+    close: "}",
+  }
 })
   .then(editor => {
     console.log("Editor was initialized", editor);

@@ -29,5 +29,9 @@ ClassicEditor.create(document.querySelector("#editor"), {
   placeholderProps: {
     types: ["First Name", "Date"],
   },
+  placeholderBrackets: {
+    open: "{",
+    close: "}",
+  }
 });
 ```
