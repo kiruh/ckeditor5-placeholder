@@ -63,7 +63,7 @@
     "@ckeditor/ckeditor5-utils": "^13.0.1",
     "@ckeditor/ckeditor5-widget": "^11.0.4",
     "chokidar": "^3.5.1",
-    "ckeditor5-placeholder": "^1.0.6",
+    "ckeditor5-placeholder": "^1.1.0",
     "core-js": "^3.0.1"
   }
 }
