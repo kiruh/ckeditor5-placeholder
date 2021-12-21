@@ -70,7 +70,10 @@ export default class PlaceholderEditing extends Plugin {
       },
       model: (viewElement, writer) => {
         // Extract the "name" from "{name}".
-        const name = viewElement.getChild(0).data.slice(1, -1);
+        const name = viewElement.getChild(0).data.slice(
+            config.get("placeholderBrackets.open").length,
+            0 - config.get("placeholderBrackets.close").length
+        );
 
         const modelWriter = writer.writer || writer;
 
