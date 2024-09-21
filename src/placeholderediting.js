@@ -1,14 +1,11 @@
-import Plugin from "@ckeditor/ckeditor5-core/src/plugin";
-import Widget from "@ckeditor/ckeditor5-widget/src/widget";
+import { Plugin } from 'ckeditor5';
+import { Widget } from 'ckeditor5';
 
-import {
-  toWidget,
-  viewToModelPositionOutsideModelElement,
-} from "@ckeditor/ckeditor5-widget/src/utils";
+import { toWidget, viewToModelPositionOutsideModelElement } from 'ckeditor5';
 
-import PlaceholderCommand from "./placeholdercommand";
+import PlaceholderCommand from './placeholdercommand.js';
 
-import "./theme/placeholder.css";
+import './theme/placeholder.css';
 
 export default class PlaceholderEditing extends Plugin {
   static get requires() {

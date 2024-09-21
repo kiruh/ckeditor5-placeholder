@@ -1,7 +1,7 @@
-import Plugin from "@ckeditor/ckeditor5-core/src/plugin";
+import { Plugin } from 'ckeditor5';
 
-import PlaceholderEditing from "./placeholderediting";
-import PlaceholderUI from "./placeholderui";
+import PlaceholderEditing from './placeholderediting.js';
+import PlaceholderUI from './placeholderui.js';
 
 export default class Placeholder extends Plugin {
   static get requires() {

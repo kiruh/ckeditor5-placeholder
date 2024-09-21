@@ -1,3 +1,5 @@
-import Placeholder from "./placeholder";
 
-export default Placeholder;
+
+export { default as Placeholder } from './placeholder.js';
+import './placeholder.js';
+
